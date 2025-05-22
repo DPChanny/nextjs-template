@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --color-background: #ffffff;
   --color-foreground: #171717;
@@ -6,16 +10,13 @@
   --radius: 0.5rem;
 }
 
+/*
 @media (prefers-color-scheme: dark) {
   :root {
     --color-background: #0a0a0a;
     --color-foreground: #ededed;
   }
-}
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+} */
 
 @layer base {
   *,

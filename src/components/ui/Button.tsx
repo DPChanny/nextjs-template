@@ -28,45 +28,19 @@ const buttonVariants = cva(styles.button, {
   },
 });
 
-type VariantBaseProps = {
+export type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
   variantIntent?: VariantProps<typeof buttonVariants>["intent"];
   variantTone?: VariantProps<typeof buttonVariants>["tone"];
   variantSize?: VariantProps<typeof buttonVariants>["size"];
 };
 
-type ButtonPropsWithVariant = React.ButtonHTMLAttributes<HTMLButtonElement> &
-  VariantBaseProps & {
-    overrideClass?: undefined;
-  };
-
-type ButtonPropsWithOverride = React.ButtonHTMLAttributes<HTMLButtonElement> & {
-  overrideClass: string;
-  variantIntent?: never;
-  variantTone?: never;
-  variantSize?: never;
-};
-
-export type ButtonProps = ButtonPropsWithVariant | ButtonPropsWithOverride;
-
 export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  (
-    {
-      className,
-      variantIntent,
-      variantTone,
-      variantSize,
-      overrideClass,
-      ...props
-    },
-    ref
-  ) => {
-    const baseClass =
-      overrideClass ??
-      buttonVariants({
-        intent: variantIntent,
-        tone: variantTone,
-        size: variantSize,
-      });
+  ({ className, variantIntent, variantTone, variantSize, ...props }, ref) => {
+    const baseClass = buttonVariants({
+      intent: variantIntent,
+      tone: variantTone,
+      size: variantSize,
+    });
 
     return <button ref={ref} className={cn(baseClass, className)} {...props} />;
   }
