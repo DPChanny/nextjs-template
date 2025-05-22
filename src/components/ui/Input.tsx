@@ -1,7 +1,7 @@
 import React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
-import styles from "@/components/ui/Input.module.css";
+import styles from "@/styles/ui/Input.module.css";
 
 const inputVariants = cva(styles.input, {
   variants: {
