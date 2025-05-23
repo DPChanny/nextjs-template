@@ -15,24 +15,27 @@
   }
 }
 
-@layer base {
-  *,
-  *::before,
-  *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-  html,
-  body {
-    background-color: var(--color-background);
-    color: var(--color-foreground);
-    font-family: "Pretendard", sans-serif;
-    height: 100%;
-  }
+html,
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: "Pretendard", sans-serif;
+  height: 100%;
+}
 
-  a {
-    @apply text-blue-600 hover:underline;
-  }
+a {
+  color: #2563eb; /* text-blue-600 */
+  text-decoration: underline;
+}
+
+a:hover {
+  text-decoration: underline;
 }
