@@ -31,11 +31,29 @@ export default function DemoPage() {
       <section>
         <h2 className="text-lg font-semibold mb-2">Buttons</h2>
         <div className="flex gap-4 flex-wrap">
-          <Button>Default Button</Button>
-          <Button variantIntent="secondary" variantTone="outline">
+          <Button variantSize="sm">Default Button</Button>
+          <Button
+            variantIntent="secondary"
+            variantTone="solid"
+            variantSize="sm"
+          >
             Secondary
           </Button>
-          <Button variantIntent="destructive" variantTone="ghost">
+          <Button
+            variantIntent="secondary"
+            variantTone="solid"
+            variantSize="md"
+          >
+            Secondary
+          </Button>
+          <Button
+            variantIntent="secondary"
+            variantTone="solid"
+            variantSize="lg"
+          >
+            Secondary
+          </Button>
+          <Button variantIntent="destructive" variantTone="solid">
             Destructive
           </Button>
           <Button disabled>Disabled</Button>
