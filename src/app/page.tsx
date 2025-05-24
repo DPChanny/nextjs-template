@@ -1,8 +1,8 @@
 "use client";
 
-import React, { useState } from "react";
 import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
+import { useState } from "react";
 
 export default function DemoPage() {
   const [name, setName] = useState("");
