@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import styles from "@/styles/ui/Input.module.css";
+import styles from "@/styles/components/ui/Input.module.css";
 import { cva, type VariantProps } from "class-variance-authority";
 import React from "react";
 
